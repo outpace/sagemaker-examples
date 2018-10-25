@@ -29,9 +29,9 @@ An implicit feedback matrix factorization model. Uses a classic matrix factoriza
 
 These links will work after running all the code in this notebook.
 
-* [training input file](/edit/train_data/ml-100k-gt2.csv)
-* [batch transform input file](/edit/batch_input/recommendation.requests)
-* [batch transform output file](/edit/recommendation.requests.out)
+* [training input file](https://github.com/outpace/sagemaker-examples/blob/master/train_data/ml-100k-gt2.csv)
+* [batch transform input file](https://github.com/outpace/sagemaker-examples/blob/master/batch_input/recommendation.requests)
+* [batch transform output file](https://github.com/outpace/sagemaker-examples/blob/master/recommendation.requests.out)
 
 ## Step 1 - Prepare training data <a id="prepare-training-data"></a>
 ### Download movielens 100k dataset <a id="download-movielens"></a>
@@ -163,13 +163,13 @@ TRAIN_DATA_DIR = 'train_data'
 !mkdir -p {TRAIN_DATA_DIR}
 implicit_df.to_csv('{}/ml-100k-gt2.csv'.format(TRAIN_DATA_DIR), index=False)
 
-HTML('After you run this block, click <a href="/edit/%s/ml-100k-gt2.csv" target="_blank">here</a> to see what the training data file looks like.'%(TRAIN_DATA_DIR))
+HTML('After you run this block, click <a href="https://github.com/outpace/sagemaker-examples/blob/master/%s/ml-100k-gt2.csv" target="_blank">here</a> to see what the training data file looks like.'%(TRAIN_DATA_DIR))
 ```
 
 
 
 
-After you run this block, click <a href="/edit/train_data/ml-100k-gt2.csv" target="_blank">here</a> to see what the training data file looks like.
+After you run this block, click <a href="https://github.com/outpace/sagemaker-examples/blob/master/train_data/ml-100k-gt2.csv" target="_blank">here</a> to see what the training data file looks like.
 
 
 
@@ -333,13 +333,13 @@ with open(BATCH_INPUT_DIR + '/recommendation.requests', 'w') as outfile:
     outfile.write("\n")
     json.dump({"user_id": "302", "top_n": "5"}, outfile)
     
-HTML('After you run this block, click <a href="/edit/%s/recommendation.requests" target="_blank">here</a> to see what the batch input file looks like.'%(BATCH_INPUT_DIR))
+HTML('After you run this block, click <a href="https://github.com/outpace/sagemaker-examples/blob/master/%s/recommendation.requests" target="_blank">here</a> to see what the batch input file looks like.'%(BATCH_INPUT_DIR))
 ```
 
 
 
 
-After you run this block, click <a href="/edit/batch_input/recommendation.requests" target="_blank">here</a> to see what the batch input file looks like.
+After you run this block, click <a href="https://github.com/outpace/sagemaker-examples/blob/master/batch_input/recommendation.requests" target="_blank">here</a> to see what the batch input file looks like.
 
 
 
@@ -425,7 +425,7 @@ while(True):
 ```python
 !aws s3 cp {batch_output + '/recommendation.requests.out'} .
 
-HTML('After you run this block, click <a href="/edit/recommendation.requests.out" target="_blank">here</a> to see what the batch output file looks like.')
+HTML('After you run this block, click <a href="https://github.com/outpace/sagemaker-examples/blob/master/recommendation.requests.out" target="_blank">here</a> to see what the batch output file looks like.')
 ```
 
     download: s3://sagemaker-validation-us-east-2/spotlight-implicit-factorization-test-2018-10-24-23-05-39/output/recommendation.requests.out to ./recommendation.requests.out
@@ -434,7 +434,7 @@ HTML('After you run this block, click <a href="/edit/recommendation.requests.out
 
 
 
-After you run this block, click <a href="/edit/recommendation.requests.out" target="_blank">here</a> to see what the batch output file looks like.
+After you run this block, click <a href="https://github.com/outpace/sagemaker-examples/blob/master/recommendation.requests.out" target="_blank">here</a> to see what the batch output file looks like.
 
 
 
