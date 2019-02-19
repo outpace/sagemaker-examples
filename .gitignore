@@ -1,5 +1,6 @@
 lastfm-dataset-360K.tar.gz
 .DS_Store
-.ipynb_checkpoints/*
+.ipynb_checkpoints
 implicit-bpr/training/lastfm-360k-1mm-clean.csv
 lastfm-dataset-360K/
+data
